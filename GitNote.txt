@@ -106,6 +106,7 @@ $ git config --global user.email johndoe@example.com
 ● git remote                                                    查看远程仓库
 	○ git remote add origin https://gitxxx...    给本地仓库添加远程仓库
 	○ git push --set-upstream origin master  添加远程仓库之后push需要设置push的分支
+	○ git remote rm origin                   删除上次链接后才可以git remote add origin (such :https)
 ● git push                                                        推送到远程仓库
 ● git pull                                                          拉取远程仓库
 ● git fetch                                                        拉取远程仓库，在本地创建副本
