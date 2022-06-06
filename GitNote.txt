@@ -1,0 +1,139 @@
+git init
+//创建了一个仓库就是第三区
+git status   //查看git的状态
+git add gitstudy.txt
+//此时放到暂存区了
+git status
+
+git commit -m"第一个版本"
+git config user.email "liuchang991011@163.com"
+git config user.name "lc"
+
+git commit -m"第一个版本"
+global全局的
+
+
+git init
+git add testGit,txt  //添加到暂存区
+git status
+
+git commit --amend   仅仅修改提交信息
+git commit -a -m""
+git reflog --oneline
+ git log --oneline
+
+
+testGit
+bashere
+git init  //创建仓库
+git status  //查看状态
+git diff
+git diff --staged
+鼠标创建gittestA/创建了个文本
+
+
+git clone
+git push
+
+远程仓库如果更改则需要以下命令，否则git push 提交就会产生error 
+git fetch
+git merge
+远程仓库迭代本地仓库
+git pull
+从远程仓库拉下来
+
+
+git init 
+git remote add orgin https....
+git push -u orgin "master"
+
+打标签
+git tag -a v0.1 hashvalues
+
+创建分支
+git branch testing 
+
+切换分支
+git checkout master
+
+查看所有分支的提交修改
+$ git log --oneline --decorate --graph --all
+touch wenjian
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Git指令
+● git init								初始化仓库
+● git status								查看当前的状态
+	○ git status --short                                 状态简览
+● git add								添加文件到暂存区
+	○ git add ./							添加工作区的所有文件到暂存区
+● git commit -m “xxx”					提交到git仓库
+	○ git commit -a -m "xxx"                        跳过提交暂存区操作，提交到git仓库
+	○ git commit --amend                            修改提交的信息
+● git config user.email "xxx@qq.com"		配置当前仓库提交者的email信息
+● git config user.name "xxx"				配置当前仓库提交者的名字
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+	○ git config --list                                     查看当前的配置信息
+	○ git config --global --unset-all                所设置的项目即可把设置改为默认设置
+● git --version							查看git的版本
+● git log								查看提交信息
+	○ git log --oneline                                  以行的形式展示提交信息
+	○ git reflog                                            显示所有的提交
+● git checkout 某次提交的hash值                回滚到给出的hash值所对应的提交
+	○ git checkout -b fixBug hash值            在hash值对应的提交上创建分支fixBug，
+                                                           并切换到fixBug分支
+● git clone 仓库地址                                    从给出的仓库地址克隆仓库
+● git clone https://gitee.com/silence_cat/hello-gitee.git
+● git diff                                                            比较的是工作目录中当前文件和暂存区域快照
+                                                                     之间的差异
+● git diff --staged                                        比对已暂存文件与最后一次提交的文件差异
+● git rm  test.txt                                               将test.txt移除
+	○ git rm -f test.txt                                     强制删除test.txt,从工作区和暂存区
+	○ git rm --cached b.txt                             从暂存区移除b.txt，但保留在工作区
+● git remote                                                    查看远程仓库
+	○ git remote add origin https://gitxxx...    给本地仓库添加远程仓库
+	○ git push --set-upstream origin master  添加远程仓库之后push需要设置push的分支
+● git push                                                        推送到远程仓库
+● git pull                                                          拉取远程仓库
+● git fetch                                                        拉取远程仓库，在本地创建副本
+● git merge                                                     合并
+git log --oneline --decorate --graph --all            输出你的提交历史、各个分支的指向
+                                                                          以及项目的分支分叉情况。
+● 
+
+git push origin develop:develop
+
+Linux指令
+● clear								清除
+● echo “课程名称：版本控制软件及应用”  > data.txt		将内容写入data.txt文件
+● vim data.txt  退出时输入":q"				使用vim进行查看
+vim编辑器的使用：
+i   插入。如果想推出编辑状态，按键盘上的ESC键。
+● ls                                                               列出当前目录下的文件
+● pwd                                                          显示当前路径
+● mkdir tmp                                                 创建名字为tmp的文件夹
+● rmdir tmp                                                  移除名字位tmp的文件夹
+● cd ..                                                          返回上一级目录
+● rm a.txt                                                     删除名字位a.txt的文件
+● touch b.txt                                                创建空文件b.txt
+● cat a.txt                                                   查看文件a.txt的内容
+
+
+
+git reset --soft HEAD~ 有add  没有commit
+git reset HEAD~ 没有add 也没有commit  只有保存的信息
+git reset --head HEAD~   回滚到上一次不需要这次了抹除了  这次肯定不要他了
+没有add 也没有commit  也没有保存的信息
